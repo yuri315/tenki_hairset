@@ -39,4 +39,4 @@ README〜ER図作成：11/10 〆切
 # figmaのリンク
 https://www.figma.com/file/owdCWAVoJg24enR1okBroz/%E7%84%A1%E9%A1%8C?node-id=0%3A1
 # テーブル設計
-https://gyazo.com/d6d213725e5e98cacf4f642fb465d39b
+https://gyazo.com/7d8286dbafa7638d28f2569f0cfac0f1
