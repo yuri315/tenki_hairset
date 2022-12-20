@@ -36,3 +36,9 @@ README〜ER図作成：11/10 〆切
 メイン機能実装：11/10 - 12/25  
 β版をRUNTEQ内リリース（MVP）：12/25〆切  
 本番リリース：1月前半
+<<<<<<< Updated upstream
+=======
+# figmaのリンク
+https://www.figma.com/file/owdCWAVoJg24enR1okBroz/%E7%84%A1%E9%A1%8C?node-id=0%3A1
+# テーブル設計
+>>>>>>> Stashed changes
