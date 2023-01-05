@@ -11,10 +11,10 @@ module TenkiHairset
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.generators do |g| # ここから追記
-      g.assets false          # CSS, JavaScriptファイルを自動生成しない
-      g.helper     false      # helperファイルを自動生成しない
-    end  # ここまで追記
+    config.generators do |g| 
+      g.assets     false
+      g.helper     false
+    end 
 
     # Configuration for the application, engines, and railties goes here.
     #
