@@ -33,3 +33,6 @@ ja:
   profiles:
     show:
       title: 'プロフィール'
+  advice_materials:
+    new: 
+      title: 'MY天気登録'
