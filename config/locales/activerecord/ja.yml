@@ -13,3 +13,5 @@ ja:
       advice_material:
         city: '地域'
         forecast_date: 'いつの天気を表示する？'
+      hairs_feature:
+        hair_type: '髪質'
