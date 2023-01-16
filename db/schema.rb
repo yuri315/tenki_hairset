@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2023_01_15_070421) do
 
   create_table "advice_materials", charset: "utf8mb4", force: :cascade do |t|
     t.string "city", null: false
-    t.integer "forecast_date", null: false
+    t.date "forecast_date", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 2023_01_15_070421) do
 
   create_table "hairs_features", charset: "utf8mb4", force: :cascade do |t|
     t.string "hair_type"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_hairs_features_on_user_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -39,4 +41,5 @@ ActiveRecord::Schema.define(version: 2023_01_15_070421) do
   end
 
   add_foreign_key "advice_materials", "users"
+  add_foreign_key "hairs_features", "users"
 end
