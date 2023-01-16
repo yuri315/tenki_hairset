@@ -3,6 +3,8 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
+    edit: '編集'
+    update: '更新'
   home:
     top:
       no_login: 'ログインせずに診断する'
@@ -30,12 +32,22 @@ ja:
       title: '掲示板作成'
     bookmarks:
       title: 'ブックマーク一覧'
-  profiles:
-    show:
-      title: 'プロフィール'
   advice_materials:
     new: 
       title: 'MY天気登録'
+    create:
+      success: 'MY天気登録に成功しました'
+      fail: 'MY天気登録に失敗しました'
   hairs_features:
     new:
       title: 'MY髪質登録'
+    create:
+      success: 'MY髪質登録に成功しました'
+      fail: 'MY髪質登録に失敗しました'
+  user_informations:
+    show:
+      title: 'ユーザー情報'
+      my_weather: 'MY天気情報'
+      my_hair_feature: 'MY髪質情報'
+    edit:
+      title: 'ユーザー情報編集'
