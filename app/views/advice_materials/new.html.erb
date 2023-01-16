@@ -2,7 +2,7 @@
   <div class="row">
     <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <h1><%= t '.title' %></h1>
-      <%= form_with url: advice_materials_path, local: true do |f| %>
+      <%= form_with model: @advice_material, local: true do |f| %>
         <div class="form-group">
           <%= f.label :city, AdviceMaterial.human_attribute_name(:city) %><br>
           <%= f.select :city, [["北海道", "北海道"], ["青森県", "青森県"], ["岩手県", "岩手県"], ["宮城県", "宮城県"], ["秋田県", "秋田県"], ["山形県", "山形県"], ["福島県", "福島県"], ["茨城県", "茨城県"], ["栃木県", "栃木県"], ["群馬県", "群馬県"], ["埼玉県", "埼玉県"], ["千葉県", "千葉県"], ["東京都", "東京都"], ["神奈川県", "神奈川県"], 
@@ -11,7 +11,7 @@
         </div>
         <div class="form-group">
           <%= f.label :date, AdviceMaterial.human_attribute_name(:forecast_date) %><br>
-          <%= f.select :date, [["今日", Time.zone.today],["明日", Time.zone.tomorrow]], include_blank: "選択して下さい", class: 'form-control' %>
+          <%= f.select :forecast_date, [["今日", Time.zone.today],["明日", Time.zone.tomorrow]], include_blank: "選択して下さい", class: 'form-control' %>
         </div>
         <div class="actions">
           <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
