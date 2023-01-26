@@ -3,6 +3,8 @@ ja:
     models:
       user: 'ユーザー'
       board: '掲示板'
+      advice_material: 'MY天気情報'
+      hairs_feature: 'MY髪質情報'
     attributes:
       user:
         email: 'メールアドレス'
