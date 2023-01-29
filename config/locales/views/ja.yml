@@ -5,6 +5,8 @@ ja:
     logout: 'ログアウト'
     edit: '編集'
     update: '更新'
+    user_information: '登録情報'
+    password_reset: 'パスワードリセット'
     message:
       require_login: '「ログインしてください」'
       created: '%{item}を作成しました'
@@ -35,13 +37,6 @@ ja:
       fail: 'ログインに失敗しました'
     destroy:
       success: 'ログアウトしました'
-  boards:
-    index:
-      title: '掲示板一覧'
-    new:
-      title: '掲示板作成'
-    bookmarks:
-      title: 'ブックマーク一覧'
   advice_materials:
     new: 
       title: 'MY天気登録'
@@ -65,3 +60,14 @@ ja:
       my_hair_feature: 'MY髪質情報'
     edit:
       title: 'ユーザー情報編集'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
