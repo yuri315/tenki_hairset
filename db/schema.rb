@@ -13,12 +13,20 @@
 ActiveRecord::Schema.define(version: 2023_01_29_093840) do
 
   create_table "advice_materials", charset: "utf8mb4", force: :cascade do |t|
-    t.string "city", null: false
-    t.date "forecast_date", null: false
+    t.string "forecast_date", null: false
     t.bigint "user_id"
+    t.bigint "city_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_id"], name: "index_advice_materials_on_city_id"
     t.index ["user_id"], name: "index_advice_materials_on_user_id"
+  end
+
+  create_table "cities", charset: "utf8mb4", force: :cascade do |t|
+    t.string "city_name", null: false, comment: "都市名"
+    t.integer "location_id", null: false, comment: "locationのid"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "hairs_features", charset: "utf8mb4", force: :cascade do |t|
@@ -46,13 +54,14 @@ ActiveRecord::Schema.define(version: 2023_01_29_093840) do
   end
 
   create_table "weather_forecasts", charset: "utf8mb4", force: :cascade do |t|
-    t.bigint "user_id"
+    t.bigint "advice_material_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_weather_forecasts_on_user_id"
+    t.index ["advice_material_id"], name: "index_weather_forecasts_on_advice_material_id"
   end
 
+  add_foreign_key "advice_materials", "cities"
   add_foreign_key "advice_materials", "users"
   add_foreign_key "hairs_features", "users"
-  add_foreign_key "weather_forecasts", "users"
+  add_foreign_key "weather_forecasts", "advice_materials"
 end

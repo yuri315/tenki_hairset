@@ -5,12 +5,9 @@ class AdviceMaterialsController < ApplicationController
   end
     
   def create
-    @advice_material = current_user.advice_materials.build(advice_material_params)
-    if  AdviceMaterial.exists?
-      flash.now[:danger] = t('.fail')
-      render :new
-    elsif
-      @advice_material.save
+    @advice_material = current_user.build_advice_material(advice_material_params)
+
+    if @advice_material.save
       redirect_to login_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
@@ -33,11 +30,11 @@ class AdviceMaterialsController < ApplicationController
   private
     
   def advice_material_params
-    params.require(:advice_material).permit(:city, :forecast_date)
+    params.require(:advice_material).permit(:forecast_date, :city_id)
   end  
 
   def set_advice_material
-    @advice_material = current_user.advice_materials.find(current_user.id)
+    @advice_material = current_user.advice_material
   end
 
 end
