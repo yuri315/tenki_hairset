@@ -21,11 +21,11 @@
     <table class="table">
       <tr>
         <th scope="row"><%= t(AdviceMaterial.human_attribute_name(:city)) %></th>
-        <td><%= current_user.advice_materials.pluck(:city) %></td>
+        <td><%= City.where(id: @city_id).pluck(:city_name) %></td>
       </tr>
       <tr>
         <th scope="row"><%= t(AdviceMaterial.human_attribute_name(:forecast_date)) %></th>
-        <td><%= current_user.advice_materials.pluck(:forecast_date) %></td>
+        <td><%= current_user.advice_material.forecast_date %></td>
       </tr>
     </table>
   </div>
