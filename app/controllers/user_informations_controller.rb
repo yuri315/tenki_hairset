@@ -3,6 +3,8 @@ class UserInformationsController < ApplicationController
   before_action :set_advice_material,only: %i[show]
   before_action :set_hairs_feature,only: %i[show]
   def show
+    @city_id = current_user.advice_material.city_id
+    @date = current_user.advice_material.forecast_date
   end
 
   def edit
@@ -25,7 +27,7 @@ end
     @user = User.find(current_user.id)
   end
   def set_advice_material
-    @advice_material = current_user.advice_materials.find(current_user.id)
+    @advice_material = current_user.advice_material
   end
   def set_hairs_feature
     @hairs_feature = current_user.hairs_features.find(current_user.id)
