@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :advice_materials, only: %i[new create edit update]
   resources :hairs_features, only: %i[new create edit update]
   resource :user_information, only: %i[show edit update]
+  resources :weather_forecasts, only: %i[new create update index]
   resources :password_resets, only: %i[new create edit update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -21,7 +21,7 @@
     <table class="table">
       <tr>
         <th scope="row"><%= t(AdviceMaterial.human_attribute_name(:city)) %></th>
-        <td><%= City.where(id: @city_id).pluck(:city_name) %></td>
+        <td><%= City.where(id: @city_id).pluck(:city_name).join %></td>
       </tr>
       <tr>
         <th scope="row"><%= t(AdviceMaterial.human_attribute_name(:forecast_date)) %></th>
@@ -35,7 +35,7 @@
   <table class="table">
     <tr>
       <th scope="row"><%= t(HairsFeature.human_attribute_name(:hair_type)) %></th>
-      <td><%= current_user.hairs_features.pluck(:hair_type) %></td>
+      <td><%= current_user.hairs_features.pluck(:hair_type).join %></td>
     </tr>
   </table>
 </div>

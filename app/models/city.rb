@@ -1,3 +1,3 @@
 class City < ApplicationRecord
-  belongs_to :advice_materials , optional: true
+  has_many :advice_materials
 end
