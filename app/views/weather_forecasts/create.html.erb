@@ -1,0 +1,4 @@
+<div class="weatherMain"> 
+<h2>現在の天気は</h2>
+<%= image_tag "http://openweathermap.org/img/wn/#{WeatherForecast.where(id: @advice_material.id).pluck(:weather_icon).join.chop}d@2x.png" %>
+</div>

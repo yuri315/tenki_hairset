@@ -6,7 +6,7 @@ class HairsFeaturesController < ApplicationController
 
   def create
     @hairs_feature = current_user.hairs_features.build(hairs_feature_params)
-    if  HairsFeature.exists?
+    if  current_user.hairs_features.exists?
       flash.now[:danger] = t('.fail')
       render :new
     elsif

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_29_093840) do
+ActiveRecord::Schema.define(version: 2023_02_16_025001) do
 
   create_table "advice_materials", charset: "utf8mb4", force: :cascade do |t|
     t.string "forecast_date", null: false
@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2023_01_29_093840) do
 
   create_table "cities", charset: "utf8mb4", force: :cascade do |t|
     t.string "city_name", null: false, comment: "都市名"
-    t.integer "location_id", null: false, comment: "locationのid"
+    t.float "lat", null: false, comment: "locationの緯度"
+    t.float "lon", null: false, comment: "locationの経度"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -57,6 +58,15 @@ ActiveRecord::Schema.define(version: 2023_01_29_093840) do
     t.bigint "advice_material_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.float "temp_max"
+    t.float "temp_min"
+    t.float "temp_feel"
+    t.integer "weather_id"
+    t.integer "rainfall"
+    t.datetime "date"
+    t.float "humidity"
+    t.float "wind_speed"
+    t.string "weather_icon"
     t.index ["advice_material_id"], name: "index_weather_forecasts_on_advice_material_id"
   end
 

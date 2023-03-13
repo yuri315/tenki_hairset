@@ -1,5 +1,5 @@
 class AdviceMaterial < ApplicationRecord
   belongs_to :user 
-  has_one :city
+  belongs_to :city
   validates :user_id, uniqueness: true
 end
