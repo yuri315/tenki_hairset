@@ -11,6 +11,8 @@ require "csv"
 CSV.foreach('db/csv/cities.csv', headers: true) do |row|
   City.create(
     city_name: row[0],
-    location_id: row[1],
+    lat: row[1],
+    lon: row[2]
+
   )
 end
