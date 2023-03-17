@@ -30,6 +30,6 @@ end
     @advice_material = current_user.advice_material
   end
   def set_hairs_feature
-    @hairs_feature = current_user.hairs_features.find(current_user.id)
+    @hairs_feature = current_user.hairs_feature
   end
 end

@@ -35,7 +35,7 @@
   <table class="table">
     <tr>
       <th scope="row"><%= t(HairsFeature.human_attribute_name(:hair_type)) %></th>
-      <td><%= current_user.hairs_features.pluck(:hair_type).join %></td>
+      <td><%= current_user.hairs_feature.hair_type %></td>
     </tr>
   </table>
 </div>
