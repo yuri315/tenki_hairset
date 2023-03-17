@@ -5,13 +5,9 @@ class HairsFeaturesController < ApplicationController
   end
 
   def create
-    @hairs_feature = current_user.hairs_features.build(hairs_feature_params)
-    if  current_user.hairs_features.exists?
-      flash.now[:danger] = t('.fail')
-      render :new
-    elsif
-      @hairs_feature.save
-      redirect_to login_path, success: t('.success')
+    @hairs_feature = current_user.build_hairs_feature(hairs_feature_params)
+    if @hairs_feature.save
+      redirect_to new_weather_forecast_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new
@@ -36,6 +32,6 @@ class HairsFeaturesController < ApplicationController
     params.require(:hairs_feature).permit(:hair_type)
   end 
   def set_hairs_feature
-    @hairs_feature = current_user.hairs_features.find(current_user.id)
+    @hairs_feature = current_user.hairs_feature
   end
 end

@@ -8,7 +8,7 @@ class AdviceMaterialsController < ApplicationController
     @advice_material = current_user.build_advice_material(advice_material_params)
 
     if @advice_material.save
-      redirect_to login_path, success: t('.success')
+      redirect_to new_hairs_feature_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new
