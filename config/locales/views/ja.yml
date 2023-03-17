@@ -7,6 +7,7 @@ ja:
     update: '更新'
     user_information: '登録情報'
     password_reset: 'パスワードリセット'
+    hair_advice: '癖っ毛さん天気予報'
     message:
       require_login: '「ログインしてください」'
       created: '%{item}を作成しました'
