@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
 
   create_table "weather_forecasts", charset: "utf8mb4", force: :cascade do |t|
     t.bigint "advice_material_id"
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.float "temp_max"
@@ -68,10 +69,12 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.float "wind_speed"
     t.string "weather_icon"
     t.index ["advice_material_id"], name: "index_weather_forecasts_on_advice_material_id"
+    t.index ["user_id"], name: "index_weather_forecasts_on_user_id"
   end
 
   add_foreign_key "advice_materials", "cities"
   add_foreign_key "advice_materials", "users"
   add_foreign_key "hairs_features", "users"
   add_foreign_key "weather_forecasts", "advice_materials"
+  add_foreign_key "weather_forecasts", "users"
 end
