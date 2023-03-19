@@ -1,7 +1,11 @@
 <div class='top-wrapper'>
   <div class='top-inner-text'>
-    <h1>HAIR STYLE ADVICE</h1>
-    <h5>癖っ毛さん専用のお天気予報です。天気予報とともに、髪のうねり具合を予想しアドバイスをしてくれます。</h5>
+    <h1>WEATHER FORECAST </br>with</br>HAIR STYLE ADVICE</h1>
+    <h5>癖っ毛さん専用のお天気予報です。</br>
+    天気予報とともに、髪のうねり具合を予想しお手入れ方法を、アドバイスをしてくれます。</h5>
+      <div class="check">
+        <%= link_to (t '.to_sample'), home_sample_path , class: 'btn btn-primary' %>
+      </div>
       <div class="actions">
         <%= link_to (t 'defaults.login'), login_path , class: 'btn btn-primary' %>
         <%= link_to (t 'defaults.register'), new_user_path, class: 'btn btn-primary' %>

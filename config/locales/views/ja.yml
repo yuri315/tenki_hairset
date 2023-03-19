@@ -17,10 +17,11 @@ ja:
       delete: '%{item}を削除しました'
       delete_confirm: '削除しますか？'
       not_authorized: '権限がありません'
-    post: '投稿'
   home:
     top:
-      no_login: 'ログインせずに診断する'
+      to_sample: '診断結果のサンプルを見る'
+    sample:
+      to_top: 'トップページへ戻る'
   users:
     new:
       title: 'ユーザー登録'
@@ -75,3 +76,5 @@ ja:
   weather_forecasts:
     new:
       check: '診断結果を見る'
+    create: 
+      fail: '天気情報の取得に失敗しました'

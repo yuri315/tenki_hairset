@@ -15,7 +15,7 @@ class WeatherForecastsController < ApplicationController
       WeatherForecast.find_or_initialize_by(advice_material_id: @advice_material.id, user_id: current_user.id).update!(params_weather)
       redirect_to weather_forecast_path(id: current_user.id)
     else
-      flash[:notice] = "天気情報の取得に失敗しました"
+      flash[:notice] = t '.fail'
     end 
 
   end

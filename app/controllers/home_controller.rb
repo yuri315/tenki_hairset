@@ -11,4 +11,6 @@ class HomeController < ApplicationController
       redirect_to new_hairs_feature_path
     end
   end
+  def sample
+  end
 end
