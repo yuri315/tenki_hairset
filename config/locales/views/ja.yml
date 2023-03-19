@@ -1,0 +1,80 @@
+ja:
+  defaults:
+    login: 'ログイン'
+    register: '登録'
+    logout: 'ログアウト'
+    edit: '編集'
+    update: '更新'
+    user_information: '登録情報'
+    password_reset: 'パスワードリセット'
+    hair_advice: '癖っ毛さん天気予報'
+    message:
+      require_login: '「ログインしてください」'
+      created: '%{item}を作成しました'
+      not_created: '%{item}を作成できませんでした'
+      update: '%{item}を更新しました。'
+      update_fail: '%{item}を更新できませんでした。'
+      delete: '%{item}を削除しました'
+      delete_confirm: '削除しますか？'
+      not_authorized: '権限がありません'
+  home:
+    top:
+      to_sample: '診断結果のサンプルを見る'
+    sample:
+      to_top: 'トップページへ戻る'
+  users:
+    new:
+      title: 'ユーザー登録'
+      to_login_page: 'ログインページへ'
+    create:
+      success: 'ユーザー登録が完了しました'
+      fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+      to_register_page: '登録ページへ'
+      password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      success: 'ログインしました'
+      fail: 'ログインに失敗しました'
+    destroy:
+      success: 'ログアウトしました'
+  advice_materials:
+    new: 
+      title: 'MY天気登録'
+    create:
+      success: 'MY天気登録に成功しました'
+      fail: 'MY天気登録に失敗しました'
+    edit:
+      title: 'MY天気登録'
+  hairs_features:
+    new:
+      title: 'MY髪質登録'
+    create:
+      success: 'MY髪質登録に成功しました'
+      fail: 'MY髪質登録に失敗しました'
+    edit:
+      title: 'MY髪質登録'
+  user_informations:
+    show:
+      title: 'ユーザー情報'
+      my_weather: 'MY天気情報'
+      my_hair_feature: 'MY髪質情報'
+    edit:
+      title: 'ユーザー情報編集'
+  password_resets:
+    new:
+      title: 'パスワードリセット申請'
+      submit: '送信'
+    edit:
+      title: 'パスワードリセット'
+    create:
+      success: 'パスワードリセット手順を送信しました'
+    update:
+      success: 'パスワードを変更しました'
+      fail: 'パスワードの変更に失敗しました'
+  weather_forecasts:
+    new:
+      check: '診断結果を見る'
+    create: 
+      fail: '天気情報の取得に失敗しました'

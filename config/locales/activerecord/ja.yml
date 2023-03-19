@@ -1,0 +1,19 @@
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      advice_material: 'MY天気情報'
+      hairs_feature: 'MY髪質情報'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        last_name: '姓'
+        first_name: '名'
+        full_name: '名前'
+      advice_material:
+        city: '地域'
+        forecast_date: 'いつの天気を表示する？'
+      hairs_feature:
+        hair_type: '髪質'

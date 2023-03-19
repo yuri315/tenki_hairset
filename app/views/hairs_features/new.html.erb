@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1><%= t '.title' %></h1>
+      <%= form_with model: @hairs_feature, local: true do |f| %>
+        <div class="form-group">
+          <%= f.label :hair_type, HairsFeature.human_attribute_name(:hair_type) %><br>
+          <%= f.select :hair_type, [["剛毛の癖毛さん", "剛毛"],["猫っ毛の癖毛さん", "剛毛"]], include_blank: "選択して下さい", class: 'form-control' %>
+        </div>
+        <div class="actions">
+          <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
