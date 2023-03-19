@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
   root 'home#top'
 
+  get 'home/sample', to: 'home#sample'
   get 'login', to: 'user_sessions#new'
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
+
 
   resources :users, only: %i[new create update destroy]
   resources :advice_materials, only: %i[new create edit update]

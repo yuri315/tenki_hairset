@@ -61,10 +61,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.datetime "updated_at", precision: 6, null: false
     t.float "temp_max"
     t.float "temp_min"
-    t.float "temp_feel"
     t.integer "weather_id"
-    t.integer "rainfall"
-    t.datetime "date"
     t.float "humidity"
     t.float "wind_speed"
     t.string "weather_icon"
