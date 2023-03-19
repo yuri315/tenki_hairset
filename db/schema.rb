@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2023_02_16_025001) do
 
-  create_table "advice_materials", charset: "utf8mb4", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "advice_materials", force: :cascade do |t|
     t.string "forecast_date", null: false
     t.bigint "user_id"
     t.bigint "city_id"
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.index ["user_id"], name: "index_advice_materials_on_user_id"
   end
 
-  create_table "cities", charset: "utf8mb4", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
     t.string "city_name", null: false, comment: "都市名"
     t.float "lat", null: false, comment: "locationの緯度"
     t.float "lon", null: false, comment: "locationの経度"
@@ -30,7 +33,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "hairs_features", charset: "utf8mb4", force: :cascade do |t|
+  create_table "hairs_features", force: :cascade do |t|
     t.string "hair_type"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.index ["user_id"], name: "index_hairs_features_on_user_id"
   end
 
-  create_table "users", charset: "utf8mb4", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "crypted_password"
     t.string "salt"
@@ -54,7 +57,7 @@ ActiveRecord::Schema.define(version: 2023_02_16_025001) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "weather_forecasts", charset: "utf8mb4", force: :cascade do |t|
+  create_table "weather_forecasts", force: :cascade do |t|
     t.bigint "advice_material_id"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
