@@ -1,0 +1,20 @@
+current directory: /Users/yuri/workspace/runteq/portfolio/tenki_hairset/vendor/bundle/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+/Users/yuri/.rbenv/versions/3.0.2/bin/ruby -I /Users/yuri/.rbenv/versions/3.0.2/lib/ruby/site_ruby/3.0.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: /Users/yuri/workspace/runteq/portfolio/tenki_hairset/vendor/bundle/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230320-3164-lgajk2 sitelibdir\=./.gem.20230320-3164-lgajk2 clean
+
+current directory: /Users/yuri/workspace/runteq/portfolio/tenki_hairset/vendor/bundle/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230320-3164-lgajk2 sitelibdir\=./.gem.20230320-3164-lgajk2
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/yuri/workspace/runteq/portfolio/tenki_hairset/vendor/bundle/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230320-3164-lgajk2 sitelibdir\=./.gem.20230320-3164-lgajk2 install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20230320-3164-lgajk2/racc
+
+current directory: /Users/yuri/workspace/runteq/portfolio/tenki_hairset/vendor/bundle/ruby/3.0.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20230320-3164-lgajk2 sitelibdir\=./.gem.20230320-3164-lgajk2 clean
