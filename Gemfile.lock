@@ -71,6 +71,8 @@ GEM
       execjs (~> 2)
     bcrypt (3.1.18)
     bindex (0.8.1)
+    bootsnap (1.16.0)
+      msgpack (~> 1.2)
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
       popper_js (>= 1.14.3, < 2)
@@ -194,6 +196,7 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.18.0)
+    msgpack (1.6.1)
     multi_xml (0.6.0)
     net-imap (0.3.4)
       date
@@ -374,6 +377,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bootsnap (>= 1.4.4)
   bootstrap (~> 4.3.1)
   byebug
   capybara (>= 3.26)
