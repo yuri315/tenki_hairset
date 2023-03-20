@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: tenki_hairset_production
   username: tenki_hairset
   password: <%= ENV['TENKI_HAIRSET_DATABASE_PASSWORD'] %>
