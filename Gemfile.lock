@@ -209,12 +209,7 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
-<<<<<<< HEAD
-    nokogiri (1.14.2)
-      mini_portile2 (~> 2.8.0)
-=======
     nokogiri (1.13.9-x86_64-linux)
->>>>>>> main
       racc (~> 1.4)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
@@ -382,10 +377,6 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
-<<<<<<< HEAD
-  ruby
-=======
->>>>>>> main
   x86_64-linux
 
 DEPENDENCIES
