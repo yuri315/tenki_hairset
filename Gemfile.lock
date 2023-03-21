@@ -195,6 +195,7 @@ GEM
     matrix (0.4.2)
     method_source (1.0.0)
     mini_mime (1.1.2)
+    mini_portile2 (2.8.1)
     minitest (5.18.0)
     msgpack (1.6.1)
     multi_xml (0.6.0)
@@ -208,9 +209,16 @@ GEM
     net-smtp (0.3.3)
       net-protocol
     nio4r (2.5.8)
+<<<<<<< HEAD
+    nokogiri (1.14.2)
+      mini_portile2 (~> 2.8.0)
+=======
     nokogiri (1.13.9-x86_64-linux)
+>>>>>>> main
       racc (~> 1.4)
     nokogiri (1.14.2-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
       racc (~> 1.4)
     oauth (0.6.2)
       snaky_hash (~> 2.0)
@@ -374,6 +382,10 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+<<<<<<< HEAD
+  ruby
+=======
+>>>>>>> main
   x86_64-linux
 
 DEPENDENCIES
