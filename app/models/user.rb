@@ -12,4 +12,16 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :first_name, presence: true, length: { maximum: 255 }
   validates :last_name, presence: true, length: { maximum: 255 }
+  def full_register
+    advice_material.present? && hairs_feature.present?
+  end
+  def no_hairs_feature
+    advice_material.present? && !hairs_feature.present?
+  end
+  def no_advice_material
+    !advice_material.present? && hairs_feature.present?
+  end
+  def no_register
+    !advice_material.present? && !hairs_feature.present?
+  end
 end
