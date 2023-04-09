@@ -1,6 +1,9 @@
+<div class="information-wrapper">
+<div class="information-inner-text">
+<% content_for(:title, t('.title')) %>
 <div class="container">
   <div class="row">
-    <div class=" col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+    <div class="col-md-10 offset-md-1">
       <h1><%= t '.title' %></h1>
       <%= form_with model: @hairs_feature, local: true do |f| %>
         <div class="form-group">
@@ -11,5 +14,8 @@
           <%= f.submit (t 'defaults.register'), class: 'btn btn-primary' %>
         </div>
       <% end %>
+      </div>
+      </div>
     </div>
-  </div>
+    </div>
+    </div>

@@ -13,7 +13,7 @@ ja:
         first_name: '名'
         full_name: '名前'
       advice_material:
-        city: '地域'
-        forecast_date: 'いつの天気を表示する？'
+        city: '地域　'
+        forecast_date: '予報日'
       hairs_feature:
-        hair_type: '髪質'
+        hair_type: '髪質　'

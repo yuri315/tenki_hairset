@@ -1,10 +1,11 @@
-<% content_for(:title, t('.title') ) %>
+<div class="information-wrapper">
+<div class="information-inner-text">
 <div class="container pt-3">
   <div class="row">
     <div class="col-md-10 offset-md-1">
       <h1 class="float-left mb-5"><%= t('.title') %></h1>
-      <%= link_to t('defaults.edit'), edit_user_information_path, class: 'btn btn-success float-right' %>
-      <table class="table">
+      <%= link_to t('defaults.edit'), edit_user_information_path, class: 'btn btn-primary float-right' %>
+      <table class="table text-white">
         <tr>
           <th scope="row"><%= t(User.human_attribute_name(:email)) %></th>
           <td><%= current_user.email %></td>
@@ -17,8 +18,8 @@
     </div>
     <div class="col-md-10 offset-md-1">
     <h1 class="float-left mb-5"><%= t('.my_weather') %></h1>
-    <%= link_to t('defaults.edit'), edit_advice_material_path(@advice_material), class: 'btn btn-success float-right' %>
-    <table class="table">
+    <%= link_to t('defaults.edit'), edit_advice_material_path(@advice_material), class: 'btn btn-primary float-right' %>
+    <table class="table text-white">
       <tr>
         <th scope="row"><%= t(AdviceMaterial.human_attribute_name(:city)) %></th>
         <td><%= City.where(id: @city_id).pluck(:city_name).join %></td>
@@ -31,13 +32,15 @@
   </div>
   <div class="col-md-10 offset-md-1">
   <h1 class="float-left mb-5"><%= t('.my_hair_feature') %></h1>
-  <%= link_to t('defaults.edit'), edit_hairs_feature_path(@hairs_feature), class: 'btn btn-success float-right' %>
-  <table class="table">
+  <%= link_to t('defaults.edit'), edit_hairs_feature_path(@hairs_feature), class: 'btn btn-primary float-right' %>
+  <table class="table text-white">
     <tr>
       <th scope="row"><%= t(HairsFeature.human_attribute_name(:hair_type)) %></th>
       <td><%= current_user.hairs_feature.hair_type %></td>
     </tr>
   </table>
-</div>
   </div>
+  </div>
+</div>
+</div>
 </div>
