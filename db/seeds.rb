@@ -16,3 +16,10 @@ CSV.foreach('db/csv/cities.csv', headers: true) do |row|
 
   )
 end
+
+CSV.foreach('db/csv/advices.csv', headers: true) do |row|
+  Advice.create(
+    advice: row[0]
+
+  )
+end
