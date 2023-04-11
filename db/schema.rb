@@ -10,77 +10,76 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_04_05_071202) do
-
+ActiveRecord::Schema.define(version: 20_230_405_071_202) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
-  create_table "advice_materials", force: :cascade do |t|
-    t.string "forecast_date", null: false
-    t.bigint "user_id"
-    t.bigint "city_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["city_id"], name: "index_advice_materials_on_city_id"
-    t.index ["user_id"], name: "index_advice_materials_on_user_id"
+  create_table 'advice_materials', force: :cascade do |t|
+    t.string 'forecast_date', null: false
+    t.bigint 'user_id'
+    t.bigint 'city_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['city_id'], name: 'index_advice_materials_on_city_id'
+    t.index ['user_id'], name: 'index_advice_materials_on_user_id'
   end
 
-  create_table "advices", force: :cascade do |t|
-    t.text "advice", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'advices', force: :cascade do |t|
+    t.text 'advice', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "cities", force: :cascade do |t|
-    t.string "city_name", null: false, comment: "都市名"
-    t.float "lat", null: false, comment: "locationの緯度"
-    t.float "lon", null: false, comment: "locationの経度"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+  create_table 'cities', force: :cascade do |t|
+    t.string 'city_name', null: false, comment: '都市名'
+    t.float 'lat', null: false, comment: 'locationの緯度'
+    t.float 'lon', null: false, comment: 'locationの経度'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
   end
 
-  create_table "hairs_features", force: :cascade do |t|
-    t.string "hair_type"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_hairs_features_on_user_id"
+  create_table 'hairs_features', force: :cascade do |t|
+    t.string 'hair_type'
+    t.bigint 'user_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.index ['user_id'], name: 'index_hairs_features_on_user_id'
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "email", null: false
-    t.string "crypted_password"
-    t.string "salt"
-    t.string "first_name", null: false
-    t.string "last_name", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "reset_password_token"
-    t.datetime "reset_password_token_expires_at"
-    t.datetime "reset_password_email_sent_at"
-    t.integer "access_count_to_reset_password_page", default: 0
-    t.index ["email"], name: "index_users_on_email", unique: true
-    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  create_table 'users', force: :cascade do |t|
+    t.string 'email', null: false
+    t.string 'crypted_password'
+    t.string 'salt'
+    t.string 'first_name', null: false
+    t.string 'last_name', null: false
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'reset_password_token'
+    t.datetime 'reset_password_token_expires_at'
+    t.datetime 'reset_password_email_sent_at'
+    t.integer 'access_count_to_reset_password_page', default: 0
+    t.index ['email'], name: 'index_users_on_email', unique: true
+    t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
   end
 
-  create_table "weather_forecasts", force: :cascade do |t|
-    t.bigint "advice_material_id"
-    t.bigint "user_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "temp_max"
-    t.float "temp_min"
-    t.integer "weather_id"
-    t.float "humidity"
-    t.float "wind_speed"
-    t.string "weather_icon"
-    t.index ["advice_material_id"], name: "index_weather_forecasts_on_advice_material_id"
-    t.index ["user_id"], name: "index_weather_forecasts_on_user_id"
+  create_table 'weather_forecasts', force: :cascade do |t|
+    t.bigint 'advice_material_id'
+    t.bigint 'user_id'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.float 'temp_max'
+    t.float 'temp_min'
+    t.integer 'weather_id'
+    t.float 'humidity'
+    t.float 'wind_speed'
+    t.string 'weather_icon'
+    t.index ['advice_material_id'], name: 'index_weather_forecasts_on_advice_material_id'
+    t.index ['user_id'], name: 'index_weather_forecasts_on_user_id'
   end
 
-  add_foreign_key "advice_materials", "cities"
-  add_foreign_key "advice_materials", "users"
-  add_foreign_key "hairs_features", "users"
-  add_foreign_key "weather_forecasts", "advice_materials"
-  add_foreign_key "weather_forecasts", "users"
+  add_foreign_key 'advice_materials', 'cities'
+  add_foreign_key 'advice_materials', 'users'
+  add_foreign_key 'hairs_features', 'users'
+  add_foreign_key 'weather_forecasts', 'advice_materials'
+  add_foreign_key 'weather_forecasts', 'users'
 end

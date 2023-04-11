@@ -1,5 +1,5 @@
 class HairsFeaturesController < ApplicationController
-  before_action :set_hairs_feature,only: %i[edit update]
+  before_action :set_hairs_feature, only: %i[edit update]
   def new
     @hairs_feature = HairsFeature.new
   end
@@ -14,23 +14,23 @@ class HairsFeaturesController < ApplicationController
     end
   end
 
-  def edit
-  end
+  def edit; end
 
   def update
     if @hairs_feature.update(hairs_feature_params)
       redirect_to user_information_path, success: t('defaults.message.update', item: HairsFeature.model_name.human)
-    else 
+    else
       flash.now[:danger] = t('defaults.message.update_fail', item: HairsFeature.model_name.human)
       render :edit
     end
   end
-    
-        
+
   private
+
   def hairs_feature_params
     params.require(:hairs_feature).permit(:hair_type)
-  end 
+  end
+
   def set_hairs_feature
     @hairs_feature = current_user.hairs_feature
   end

@@ -1,6 +1,6 @@
-require_relative "boot"
+require_relative 'boot'
 
-require "rails/all"
+require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -11,14 +11,14 @@ module TenkiHairset
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
-    config.generators do |g| 
+    config.generators do |g|
       g.assets     false
       g.helper     false
-    end 
+    end
 
     config.i18n.default_locale = :ja
     config.i18n.load_path += Dir[Rails.root.join('config/locales/**/*.{rb,yml}').to_s]
-    
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
