@@ -3,21 +3,19 @@ class UserSessionsController < ApplicationController
   def new; end
 
   def create
-    @user = login(params[:email], params[:password]) 
-    if @user && @user.full_register
-      redirect_to new_weather_forecast_path, success: t('.success') 
-    elsif @user && @user.no_hairs_feature
+    @user = login(params[:email], params[:password])
+    if @user&.full_register
+      redirect_to new_weather_forecast_path, success: t('.success')
+    elsif @user&.no_hairs_feature
       redirect_to new_hairs_feature_path, success: t('.success')
-    elsif @user && @user.no_advice_material
-      redirect_to new_advice_material_path, success: t('.success')
-    elsif @user && @user.no_register
+    elsif @user&.no_advice_material || @user&.no_register
       redirect_to new_advice_material_path, success: t('.success')
     else
       flash.now[:danger] = t('.fail')
       render :new
     end
   end
-  
+
   def destroy
     logout
     redirect_to root_path, success: t('.success')

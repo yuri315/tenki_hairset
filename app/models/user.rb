@@ -15,12 +15,15 @@ class User < ApplicationRecord
   def full_register
     advice_material.present? && hairs_feature.present?
   end
+
   def no_hairs_feature
     advice_material.present? && !hairs_feature.present?
   end
+
   def no_advice_material
     !advice_material.present? && hairs_feature.present?
   end
+
   def no_register
     !advice_material.present? && !hairs_feature.present?
   end
